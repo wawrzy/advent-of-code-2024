@@ -116,12 +116,7 @@ func part2() {
 		ordered, _ := isOrdered(rules, update)
 
 		if !ordered {
-			for {
-				ok, errorIndex := isOrdered(rules, update)
-				if ok {
-					break
-				}
-
+			for ok, errorIndex := isOrdered(rules, update); !ok; ok, errorIndex = isOrdered(rules, update) {
 				// move the error index to the end
 				v := update[errorIndex]
 				update = append(update[:errorIndex], update[errorIndex+1:]...)
