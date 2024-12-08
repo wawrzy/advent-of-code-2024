@@ -9,11 +9,12 @@ import (
 	"time"
 )
 
+// 😭
+
 type Equation struct {
 	Total     int
 	Parts     []int
 	Operators []string
-	IsValid   bool
 }
 
 func parseInput() []Equation {
