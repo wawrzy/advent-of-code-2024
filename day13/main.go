@@ -9,15 +9,6 @@ import (
 	"time"
 )
 
-type Plot struct {
-	PlantType string
-	Region    int
-	Perimeter int
-	Counted   bool
-	X         int
-	Y         int
-}
-
 type ClawMachine struct {
 	ButtonA [2]int
 	ButtonB [2]int
